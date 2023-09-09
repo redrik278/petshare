@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">পেটশেয়ার</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="register.php">নিবন্ধন করুন</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">প্রবেশ করুন</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Registration Form -->
+    <div class="container mt-4">
+        <h2>নিবন্ধন</h2>
+        <form method="post" action="signup.php" id="registrationForm">
+            <label for="user_type">ব্যবহারকারীর ধরন:</label>
+            <select class="form-control" id="user_type" name="user_type">
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+            </select><br>
+    
+            <label for="username">ব্যবহারকারীর নাম:</label>
+            <input type="text" class="form-control" id="username" name="username" required pattern="^[A-Za-z0-9_]{3,15}$" title="সময়ের সাথে অক্ষর, সংখ্যা এবং আন্ডারস্কোর এর মধ্যে 3-15 টি অক্ষরের মধ্যে একটি নাম নির্ধারণ করুন"><br>
+            
+            <label for="email">ইমেইল:</label>
+            <input type="email" class="form-control" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"><br>
+            
+            <label for="password">পাসওয়ার্ড:</label>
+            <input type="password" class="form-control" id="password" name="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="সম্প্রীত পাসওয়ার্ড নির্মাণ করুন: কমপক্ষে 8 অক্ষর এবং একটি সংখ্যা"><br>
+            
+            <button type="submit" class="btn btn-primary">নিবন্ধন করুন</button>
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer class="footer mt-4">
+        <div class="container fixed-bottom text-center">
+            <!-- Social Media Links -->
+            <a href="https://www.facebook.com/your-facebook-page" target="_blank" class="btn btn-outline-primary btn-social mx-1">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="btn btn-outline-primary btn-social mx-1">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/your-github-profile" target="_blank" class="btn btn-outline-primary btn-social mx-1">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+    
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
